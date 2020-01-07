@@ -14,4 +14,9 @@ I believe that my method is O(n) time because I have to visit each element with 
 
 ## Solution
 <!-- Embedded whiteboard image -->
-https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/array-reversed.jpg
+
+[logo]: https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/array-reversed.jpg "whiteboard"
+
+## Feature Tasks
+-[x] Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
+
