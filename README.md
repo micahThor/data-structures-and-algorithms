@@ -14,3 +14,4 @@ I believe that my method is O(n) time because I have to visit each element with 
 
 ## Solution
 <!-- Embedded whiteboard image -->
+https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/array-reversed.jpg
