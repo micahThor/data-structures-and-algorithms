@@ -1,8 +1,7 @@
 # data-structures-and-algorithms
 
 
-## Challenge
-Code Challenge 1 on Jan 6. 
+# Challenge Summary - Code Challenge 1 on Jan 6. 
 
 Given an array of integers, write a method that will reverse the order of the integers.
 
@@ -27,8 +26,7 @@ I believe that my method is O(n) time because I have to visit each element with 
 ---
 ---
 
-# Challenge Summary
-Code Challenge 2 on Jan 7. 
+# Challenge Summary- Code Challenge 2 on Jan 7. 
 1. Given an array as input, insert integer input at the center of the array.  Return that array.
 
 2. Create test cases to test method.  Use an even and odd lengthed array.
