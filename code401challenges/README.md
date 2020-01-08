@@ -1,6 +1,3 @@
-# data-structures-and-algorithms
-
-
 # Challenge Summary - Code Challenge 1 on Jan 6. 
 
 Given an array of integers, write a method that will reverse the order of the integers.
