@@ -6,15 +6,20 @@ public class ArrayShift {
 
     public int[] insertShiftArray(int[] inputNumsArray, int inputNum) {
 
+        // get place to insert new value
         int posToAdd = inputNumsArray.length / 2;
 
+        // if length of array is odd number, add 1 to the position to insert
+        if (inputNumsArray.length % 2 == 1) {
+            posToAdd++;
+        }
+
+        // create new array with plus one space for new element
         int[] resultArray = new int[inputNumsArray.length + 1];
 
+        // iterate through and populate new array with old values and input value
         for (int index = 0; index < resultArray.length; index++) {
 
-            if (inputNumsArray.length % 2 == 0) {
-
-                // handles cases where input array length is an even number
                 if (index < posToAdd) {
                     resultArray[index] = inputNumsArray[index];
                 } else if (index == posToAdd) {
@@ -22,20 +27,7 @@ public class ArrayShift {
                 } else {
                     resultArray[index] = inputNumsArray[index - 1];
                 }
-
-            } else {
-
-                // handles cases where input array length is an odd number
-                if (index < posToAdd + 1) {
-                    resultArray[index] = inputNumsArray[index];
-                } else if (index == posToAdd + 1) {
-                    resultArray[index] = inputNum;
-                } else {
-                    resultArray[index] = inputNumsArray[index - 1];
-                }
             }
-        }
-
         return resultArray;
     }
 }
