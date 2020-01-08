@@ -31,9 +31,6 @@
 
     2. Create test cases to test method.  Use an even and odd lengthed array.
 
-
-
-
 ## Challenge Description
     Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index. 
 
@@ -41,4 +38,4 @@
     In this method I visit each value of the original array.  I created a split solution for even and oddly lengthed arrays.
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Array-Shift.JPG)
