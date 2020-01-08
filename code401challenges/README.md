@@ -24,7 +24,7 @@ I believe that my method is O(n) time because I have to visit each element with 
 ---
 
 # Challenge Summary- Code Challenge 2 on Jan 7. 
-1. Given an array as input, insert integer input at the center of the array.  Return that array.
+1. Given an array of integers as input, insert integer input at the center of the array.  Return that array.
 
 2. Create test cases to test method.  Use an even and odd lengthed array.
 
@@ -32,7 +32,11 @@ I believe that my method is O(n) time because I have to visit each element with 
 Write a function called insertShiftArray which takes in an array and the value to be added. Without utilizing any of the built-in methods available to your language, return an array with the new value added at the middle index. 
 
 ## Approach & Efficiency
-In this method I visit each value of the original array.  I created a split solution for even and oddly lengthed arrays.
+In this method I start by getting the element position (at center) for the input integer.  If the array length is odd, I add one value to this position.  Then I create a new array to store my data with a length one greater than input array length.  
+
+As I iterate through my input array, I want to add values in the order that they came in.  I first add all elements that exist before my new position value.  Then I add my input integer at the position value.  Then I populate the rest of the array with everything that exists beyond the position value.
+
+Then that new array is returned with the input integer inserted into the center of the array.
 
 ## Solution
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Array-Shift.JPG)
