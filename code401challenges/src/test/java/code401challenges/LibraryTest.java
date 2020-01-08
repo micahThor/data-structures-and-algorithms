@@ -5,10 +5,20 @@ package code401challenges;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+
+        ArrayShift arrayShiftClass = new ArrayShift();
+
+        int[] arrayEvenNumOfElementsInput = new int[]{2, 4, 6, 8};
+        int[] arrayEvenNumOfElementsPostTest = new int[]{2, 4, 5, 6, 8};
+
+        int[] arrayOddNumOfElementsInput = new int[]{4, 8, 15, 23, 42};
+        int[] arrayOddNumOfElementsPostTest = new int[]{4, 8, 15, 16, 23, 42};
+
+        assertArrayEquals(arrayEvenNumOfElementsPostTest, arrayShiftClass.insertShiftArray(arrayEvenNumOfElementsInput, 5));
+        assertArrayEquals(arrayOddNumOfElementsPostTest, arrayShiftClass.insertShiftArray(arrayOddNumOfElementsInput, 16));
     }
 }
