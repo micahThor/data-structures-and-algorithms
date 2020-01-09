@@ -21,4 +21,76 @@ public class LibraryTest {
         assertArrayEquals(arrayEvenNumOfElementsPostTest, arrayShiftClass.insertShiftArray(arrayEvenNumOfElementsInput, 5));
         assertArrayEquals(arrayOddNumOfElementsPostTest, arrayShiftClass.insertShiftArray(arrayOddNumOfElementsInput, 16));
     }
+
+
+    /*
+    /////////// CODE CHALLENGE 3 TEST /////////////
+     */
+    @Test public void testBinarySearchHappyPathEvenLengthArray() {
+
+        BinarySearch search = new BinarySearch();
+
+        int[] testArray = {4, 8, 15, 16, 23, 42};
+        int key = 15;
+        int expectedArrayOneIdx = 2;
+        int actualArrayOneIdx = search.BinarySearch(testArray, key);
+        assertEquals(expectedArrayOneIdx, actualArrayOneIdx);
+    }
+    /*
+    /////////// CODE CHALLENGE 3 TEST /////////////
+     */
+    @Test public void testBinarySearchHappyPathOddLengthArray() {
+
+        BinarySearch search = new BinarySearch();
+
+        int[] testArray = {4, 8, 15, 16, 23, 42, 96};
+        int key = 42;
+        int expectedArrayOneIdx = 5;
+        int actualArrayOneIdx = search.BinarySearch(testArray, key);
+        assertEquals(expectedArrayOneIdx, actualArrayOneIdx);
+    }
+    /*
+    /////////// CODE CHALLENGE 3 TEST /////////////
+     */
+    @Test public void testBinarySearchNegOneReturn() {
+
+        BinarySearch search = new BinarySearch();
+
+        int[] testArrray = {11,22,33,44,55,66,77};
+        int key = 90;
+        int expectedArrayIdx = -1;
+        int actualArrayIdx = search.BinarySearch(testArrray, key);
+        assertEquals(expectedArrayIdx, actualArrayIdx);
+    }
+    /*
+    /////////// CODE CHALLENGE 3 TEST /////////////
+     */
+    @Test public void testBinarySearchNullInputArray() {
+
+        BinarySearch search = new BinarySearch();
+
+        int[] testArrray = {};
+        int key = 90;
+        int expectedArrayIdx = -1;
+        int actualArrayIdx = search.BinarySearch(testArrray, key);
+        assertEquals(expectedArrayIdx, actualArrayIdx);
+    }
+    /*
+    /////////// CODE CHALLENGE 3 TEST /////////////
+     */
+    @Test public void testBinarySearchBigInputArray() {
+
+        BinarySearch search = new BinarySearch();
+
+        int[] testArrray = new int[1000000];
+
+        for (int i = 0; i < testArrray.length; i++) {
+            testArrray[i] = i;
+        }
+        int key = 9000;
+        int expectedArrayIdx = 9000;
+        int actualArrayIdx = search.BinarySearch(testArrray, key);
+        assertEquals(expectedArrayIdx, actualArrayIdx);
+    }
+
 }
