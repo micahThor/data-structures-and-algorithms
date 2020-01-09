@@ -40,3 +40,22 @@ Then that new array is returned with the input integer inserted into the center 
 
 ## Solution
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Array-Shift.JPG)
+---
+---
+---
+
+# Challenge Summary- Code Challenge 3 on Jan 8. 
+Implement a binary search capable of O(log n) time complexity.
+
+## Challenge Description
+Write a function called BinarySearch which takes in 2 parameters: a sorted array and the search key. Without utilizing any of the built-in methods available to your language, return the index of the array’s element that is equal to the search key, or -1 if the element does not exist.
+
+Use Junit tests to ensure quality code.
+
+## Approach & Efficiency
+In my whiteboarding session with Ellen, we realized that we could keep track of the search range that represented a halved portion of the input array.  We decided that our while loop depeneded upon these two values never converging.  Overall our whiteboard solution was close, and helped tremendously as I implemented my own solution,
+
+In my solution I kept track of the head, middle, and tail indexes of the search range.  The middle target seeks to match the key value.  If the middle index matches the key, return that index value.  If the middle target is less or greater than the key, the head and tail indexes of the search range adjust accordingly.  I ensured that even and odd arrays are compatible with this method by adjusting the midpoint value.  If the middle index never matches the key, the method returns negative one.
+
+## Solution
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/binarySearch.jpg)
