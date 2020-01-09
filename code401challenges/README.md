@@ -18,10 +18,12 @@ I believe that my method is O(n) time because I have to visit each element with 
 ## Feature Tasks
 -[x] Write a function called reverseArray which takes an array as an argument. Without utilizing any of the built-in methods available to your language, return an array with elements in reversed order.
 
+---
+---
+---
+---
+---
 
----
----
----
 
 # Challenge Summary- Code Challenge 2 on Jan 7. 
 1. Given an array of integers as input, insert integer input at the center of the array.  Return that array.
@@ -40,6 +42,9 @@ Then that new array is returned with the input integer inserted into the center 
 
 ## Solution
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Array-Shift.JPG)
+
+---
+---
 ---
 ---
 ---
@@ -58,4 +63,6 @@ In my whiteboarding session with Ellen, we realized that we could keep track of 
 In my solution I kept track of the head, middle, and tail indexes of the search range.  The middle target seeks to match the key value.  If the middle index matches the key, return that index value.  If the middle target is less or greater than the key, the head and tail indexes of the search range adjust accordingly.  I ensured that even and odd arrays are compatible with this method by adjusting the midpoint value.  If the middle index never matches the key, the method returns negative one.
 
 ## Solution
+[Visit My Solution By Clicking Here](https://github.com/micahThor/data-structures-and-algorithms/blob/master/code401challenges/src/main/java/code401challenges/BinarySearch.java)
+
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/binarySearch.jpg)
