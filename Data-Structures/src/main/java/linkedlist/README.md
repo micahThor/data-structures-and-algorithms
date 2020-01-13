@@ -1,4 +1,6 @@
-# Singly Linked List
+# LAB 05 - JAN 13 2019
+
+## Singly Linked List
 Create a singly linked list capable of O(1) insertions.  
 
 
