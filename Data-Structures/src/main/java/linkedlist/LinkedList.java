@@ -60,21 +60,20 @@ public class LinkedList<E> {
 
         StringBuilder listString = new StringBuilder();
 
-        if (this.head != null) {
-            Node<E> currentNode = head;
+        Node<E> currentNode = head;
 
-            while (currentNode != null) {
-                listString.append("{ ");
-                listString.append(currentNode.value);
+        while (currentNode != null) {
+            listString.append("{ ");
+            listString.append(currentNode.value.toString());
 
-                if (currentNode.next == null) {
-                    listString.append(" } -> NULL");
-                } else {
-                    listString.append(" } -> ");
-                }
-                currentNode = currentNode.next;
+            if (currentNode.next == null) {
+                listString.append(" } -> NULL");
+            } else {
+                listString.append(" } -> ");
             }
+            currentNode = currentNode.next;
         }
+
         return listString.toString();
     }
 
