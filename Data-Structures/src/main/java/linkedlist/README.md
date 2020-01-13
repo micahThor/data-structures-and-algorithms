@@ -1,5 +1,5 @@
 # Singly Linked List
-<!-- Short summary or background information -->
+Create a singly linked list capable of O(1) insertions.  
 
 
 ## Challenge
@@ -13,25 +13,25 @@ Be sure to follow your language/frameworks standard naming conventions (e.g. C# 
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
-Method insert   : Time - O(1) / Space - O(1)
+insert   : Time - O(1) / Space - O(1)
 
-Method includes : Time - O(n) / Space - O(1)
+includes : Time - O(n) / Space - O(1)
 
-Method getSize  : Time - O(1) / Space - O(1)
+getSize  : Time - O(1) / Space - O(1)
 
-Method toArray  : Time - O(n) / Space - O(n)
+toArray  : Time - O(n) / Space - O(n)
 
-Method toString : Time - O(n) / Space - O(n)
+toString : Time - O(n) / Space - O(n)
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
-Method insert     : Takes in a value of any type.  Assigns value to a new Node and inserts that node at the head of the Linked List
+insert     : Takes in a value of any type.  Assigns value to a new Node and inserts that node at the head of the Linked List
 
-Method includes   : Takes in a value of any type.  Iterates throughout linked list until a match is found.  If input value exists in linked list, return true.  Otherwise returns false.
+includes   : Takes in a value of any type.  Iterates throughout linked list until a match is found.  If input value exists in linked list, return true.  Otherwise returns false.
 
-Method getSize    : Returns the amount of nodes currently in Linked List
+getSize    : Returns the amount of nodes currently in Linked List
 
-Method toArray()  : Returns an array of all the values in the Linked List
+toArray    : Returns an array of all the values in the Linked List
 
-Method toString() : Returns a String representation of the Linked List
+toString   : Returns a String representation of the Linked List
 
