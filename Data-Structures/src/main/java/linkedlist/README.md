@@ -12,7 +12,11 @@ Any exceptions or errors that come from your code should be semantic, capturable
 Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+LinkedList class :  Class contains a reference to a head Node and a static size counter.  Every inserted value is inserted into the head of the linked list.
+
+Node Class       :  Class contains a reference to the Node value and the Node's next Node.
+
 insert   : Time - O(1) / Space - O(1)
 
 includes : Time - O(n) / Space - O(1)
