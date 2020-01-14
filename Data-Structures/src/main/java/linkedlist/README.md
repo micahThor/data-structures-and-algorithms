@@ -24,8 +24,6 @@ I believe that my methods are O(n) because my insertions require a current link 
     Set current node.next to new Node.
 
 
-![]()
-
 ## Feature Tasks
 -- .append(value) which adds a new node with the given value to the end of the list
 
@@ -33,6 +31,7 @@ I believe that my methods are O(n) because my insertions require a current link 
 
 -- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/threeLLinsert.jpg)
 ---
 ---
 ---
