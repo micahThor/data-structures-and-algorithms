@@ -122,7 +122,7 @@ public class LinkedListTest {
         assertEquals(900, (int)shortList.head.next.next.value);
     }
 
-    @Test public void linkedList_testInsertBeforeValueFalse() {
+    @Test public void linkedList_testInsertBeforeValue_False() {
 
         LinkedList<Integer> shortList = new LinkedList<>();
 
@@ -136,7 +136,7 @@ public class LinkedListTest {
         assertFalse(successfullyInserted);
     }
 
-    @Test public void linkedList_testInsertAfterValueMiddle() {
+    @Test public void linkedList_testInsertAfterValue_Middle() {
 
         LinkedList<Integer> shortList = new LinkedList<>();
 
@@ -150,7 +150,7 @@ public class LinkedListTest {
         assertEquals(900, (int)shortList.head.next.next.next.value);
     }
 
-    @Test public void linkedList_testInsertAfterValueFalse() {
+    @Test public void linkedList_testInsertAfterValue_False() {
 
         LinkedList<Integer> shortList = new LinkedList<>();
 
@@ -164,7 +164,7 @@ public class LinkedListTest {
         assertFalse(successfullyInserted);
     }
 
-    @Test public void linkedList_testInsertAfterValueBeginning() {
+    @Test public void linkedList_testInsertAfterValue_Beginning() {
 
         LinkedList<Integer> shortList = new LinkedList<>();
 
