@@ -19,6 +19,7 @@ public class LinkedList<E> {
             newNode.next = this.head;
             this.head = newNode;
         }
+        // increase size
         size++;
     }
 
@@ -33,6 +34,8 @@ public class LinkedList<E> {
                 Node<E> newNode = new Node<>(newVal);
                 newNode.next = currentNode.next;
                 currentNode.next = newNode;
+                // increase size
+                size++;
                 // set flag to true for successful insertBefore
                 return true;
             }
@@ -53,6 +56,8 @@ public class LinkedList<E> {
                 Node<E> newNode = new Node<>(newVal);
                 newNode.next = currentNode.next;
                 currentNode.next = newNode;
+                // increase size
+                size++;
                 // set flag to true for successful insertBefore
                 return true;
             }
@@ -79,6 +84,8 @@ public class LinkedList<E> {
             // link current last node to new node
             currentNode.next = newNode;
         }
+        // increase size
+        size++;
     }
 
     public boolean includes(E value) {
