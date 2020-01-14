@@ -40,21 +40,6 @@ public class LinkedList<E> {
         return size;
     }
 
-    public Object[] toArray() {
-
-        Object[] collection = new Object[size];
-
-        Node<E> currentNode = head;
-
-        while (currentNode != null) {
-            for (int i = 0; i < collection.length; i++) {
-                collection[i] = currentNode.value;
-                currentNode = currentNode.next;
-            }
-        }
-        return collection;
-    }
-
     @Override
     public String toString() {
 
