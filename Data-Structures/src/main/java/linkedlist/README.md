@@ -1,3 +1,40 @@
+# Code Challenge Summary - Code Challenge 6 on Jan 13. 
+
+Extend the current Linked List implementation to include these three insert methods
+
+## Approach & Efficiency
+I believe that my methods are O(n) because my insertions require a current link list traversal to insert new nodes.  In the best cases of my insertBefore and insertAfter, my methods are O(1) if the first value is the target value, and worst, O(n) if the target value isn't in the linked list.  My append method will be O(n) because I need to find the end of the linked list to add the new node. 
+
+## Solution
+.append:
+    Get the current head node and traverse through linked list while current.next doesn't equal null.
+    Set the current.next to the new node.
+.insertBefore:
+    Get the current head node and traverse through linked list while current.next doesn't equal null.
+    If the input value equals the current.next value, then insert new node.
+    Set new node.next to current node.next.
+    Set current node.next to new Node.
+.insertAfter
+    Get the current head node and traverse through linked list while current.next doesn't equal null.
+    If the input value equals the current value, then insert new node.
+    Set new node.next to current node.next.
+    Set current node.next to new Node.
+
+
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/array-reversed.jpg)
+
+## Feature Tasks
+-- .append(value) which adds a new node with the given value to the end of the list
+-- .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+-- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+---
+---
+---
+---
+---
+
+
 # LAB 05 - JAN 13 2019
 
 ## Singly Linked List
