@@ -22,6 +22,65 @@ public class LinkedList<E> {
         size++;
     }
 
+    public boolean insertBefore(E value, E newVal) {
+
+        Node<E> currentNode = this.head;
+
+        while (currentNode.next != null) {
+
+            if (currentNode.next.value.equals(value)) {
+                // add node in position
+                Node<E> newNode = new Node<>(newVal);
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+                // set flag to true for successful insertBefore
+                return true;
+            }
+            currentNode = currentNode.next;
+        }
+
+        return false;
+    }
+
+    public boolean insertAfter(E value, E newVal) {
+
+        Node<E> currentNode = this.head;
+
+        while (currentNode.next != null) {
+
+            if (currentNode.value.equals(value)) {
+                // add node in position
+                Node<E> newNode = new Node<>(newVal);
+                newNode.next = currentNode.next;
+                currentNode.next = newNode;
+                // set flag to true for successful insertBefore
+                return true;
+            }
+            currentNode = currentNode.next;
+        }
+        return false;
+    }
+
+    public void append(E value) {
+
+        // handle empty case
+        if (this.head == null) {
+            head = new Node<>(value);
+        } else {
+            // else make new node
+            Node<E> newNode = new Node<>(value);
+
+            // traverse to end of list
+            Node<E> currentNode = this.head;
+            while (currentNode.next != null) {
+                currentNode = currentNode.next;
+            }
+
+            // link current last node to new node
+            currentNode.next = newNode;
+        }
+    }
+
     public boolean includes(E value) {
 
         Node<E> currentNode = this.head;
