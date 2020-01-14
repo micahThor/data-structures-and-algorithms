@@ -98,4 +98,86 @@ public class LinkedListTest {
 
         assertFalse(actual);
     }
+
+    @Test public void linkedList_testAppend() {
+
+        integerList.append(999);
+        assertEquals(999, (int)integerList.head.next.next.next.next.next.next.next.next.next.next.next.next.value);
+        integerList.append(900009);
+        assertEquals(900009, (int)integerList.head.next.next.next.next.next.next.next.next.next.next.next.next.next.value);
+    }
+
+    @Test public void linkedList_testInsertBeforeValue() {
+
+        LinkedList<Integer> shortList = new LinkedList<>();
+
+        shortList.insert(22);
+        shortList.insert(8);
+        shortList.insert(54);
+        shortList.insert(7);
+
+        boolean successfullyInserted = shortList.insertBefore(8, 900);
+
+        assertTrue(successfullyInserted);
+        assertEquals(900, (int)shortList.head.next.next.value);
+    }
+
+    @Test public void linkedList_testInsertBeforeValueFalse() {
+
+        LinkedList<Integer> shortList = new LinkedList<>();
+
+        shortList.insert(22);
+        shortList.insert(8);
+        shortList.insert(54);
+        shortList.insert(7);
+
+        boolean successfullyInserted = shortList.insertBefore(121212, 900);
+
+        assertFalse(successfullyInserted);
+    }
+
+    @Test public void linkedList_testInsertAfterValueMiddle() {
+
+        LinkedList<Integer> shortList = new LinkedList<>();
+
+        shortList.insert(22);
+        shortList.insert(8);
+        shortList.insert(54);
+        shortList.insert(7);
+
+        boolean successfullyInserted = shortList.insertAfter(8, 900);
+        assertTrue(successfullyInserted);
+        assertEquals(900, (int)shortList.head.next.next.next.value);
+    }
+
+    @Test public void linkedList_testInsertAfterValueFalse() {
+
+        LinkedList<Integer> shortList = new LinkedList<>();
+
+        shortList.insert(22);
+        shortList.insert(8);
+        shortList.insert(54);
+        shortList.insert(7);
+
+        boolean successfullyInserted = shortList.insertAfter(22323, 900);
+
+        assertFalse(successfullyInserted);
+    }
+
+    @Test public void linkedList_testInsertAfterValueBeginning() {
+
+        LinkedList<Integer> shortList = new LinkedList<>();
+
+        shortList.insert(22);
+        shortList.insert(8);
+        shortList.insert(54);
+        shortList.insert(7);
+
+        boolean successfullyInserted = shortList.insertAfter(7, 900);
+
+        assertTrue(successfullyInserted);
+        assertEquals(900, (int)shortList.head.next.value);
+    }
+
+
 }
