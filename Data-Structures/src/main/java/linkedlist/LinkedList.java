@@ -109,7 +109,6 @@ public class LinkedList<E> {
     public E kthFromEnd(int k) {
 
         int target = this.getSize() - k - 1;
-        System.out.println(target);
         if (target < 0) {
             throw new IndexOutOfBoundsException();
         }
