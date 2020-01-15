@@ -179,5 +179,44 @@ public class LinkedListTest {
         assertEquals(900, (int)shortList.head.next.value);
     }
 
+    @Test public void linkedList_testKthFromEnd_EndOfList() {
 
+        int expected = 22;
+        int actual = integerList.kthFromEnd(0);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test public void linkedList_testKthFromEnd_MiddleOfList() {
+
+        int expected = 22;
+        int actual = integerList.kthFromEnd(6);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test public void linkedList_testKthFromEnd_StartOfList() {
+
+        int expected = 8;
+        int actual = integerList.kthFromEnd(11);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test public void linkedList_testKthFromEnd_ListLengthOfOne() {
+
+        LinkedList<Integer> integerList = new LinkedList<>();
+        integerList.insert(22);
+
+        int expected = 22;
+        int actual = integerList.kthFromEnd(0);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void linkedList_testKthFromEnd_Exception() {
+
+        int actual = integerList.kthFromEnd(12);
+    }
 }

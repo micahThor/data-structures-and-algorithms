@@ -106,6 +106,24 @@ public class LinkedList<E> {
         return size;
     }
 
+    public E kthFromEnd(int k) {
+
+        int target = this.getSize() - k - 1;
+        System.out.println(target);
+        if (target < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+
+        Node<E> currentNode = head;
+
+        while (target > 0) {
+            currentNode = currentNode.next;
+            target--;
+        }
+
+        return currentNode.value;
+    }
+
     @Override
     public String toString() {
 
