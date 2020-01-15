@@ -85,3 +85,46 @@ toArray    : Returns an array of all the values in the Linked List
 
 toString   : Returns a String representation of the Linked List
 
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/code%20ch%207.jpg)
+
+---
+---
+---
+---
+---
+
+# Code Challenge Summary - Code Challenge 7 on Jan 14. 
+
+Extend the current Linked List implementation to include a method capable of returning a node value from the end of the linked list specified by the kth value.
+
+## Approach & Efficiency
+
+During out whiteboarding session (Sergey and Josh) we decided to share the properties and methods available to all of our linked list projects.  We decided in the end that it would be prudent to find the length of our linked lists and use that value to be able to count backwards from the end of our lists.  Since I have a size method defined, I use that method to subtract from the input **k** value.  I can then iterate through my list with that value, decreasing that value with every iteration, until that value is greater than zero.  At the same time I have a Node initialized to head, and within the while loop, I set that node to the next node.  When the while loop breaks out, I am ready to return that Node's value.
+
+
+## Solution
+
+-- kthFromEnd(int k)
+        Get target integer equal to the size of the linked list minus input k value minus 1
+        
+        If integer is less than 0 throw indexoutofboundsexception
+        
+        Set current node to head
+        
+        While target is greater than zero:
+            set current to current.next
+            decrement target counter
+         
+        return current node value
+
+## Feature Tasks
+
+-- kthFromEnd(int k) : returns the Node value of the Linked List at the kth location.  The kth location is specified by the amount of node's counting backwards from the end of the linked list.
+
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/threeLLinsert.jpg)
+
+---
+---
+---
+---
+---
