@@ -85,7 +85,7 @@ toArray    : Returns an array of all the values in the Linked List
 
 toString   : Returns a String representation of the Linked List
 
-![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/code%20ch%207.jpg)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/threeLLinsert.jpg)
 
 ---
 ---
@@ -121,7 +121,8 @@ During out whiteboarding session (Sergey and Josh) we decided to share the prope
 
 -- kthFromEnd(int k) : returns the Node value of the Linked List at the kth location.  The kth location is specified by the amount of node's counting backwards from the end of the linked list.
 
-![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/threeLLinsert.jpg)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/code%20ch%207.jpg)
+
 
 ---
 ---
