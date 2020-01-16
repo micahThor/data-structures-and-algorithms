@@ -150,4 +150,4 @@ In the end I return list1's head.
 ## Solution
 [Visit My Solution By Clicking Here](https://github.com/micahThor/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedlist/LinkedList.java)
 
-![]()
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/LL-merge.jpg)
