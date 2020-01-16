@@ -123,6 +123,34 @@ public class LinkedList<E> {
         return currentNode.value;
     }
 
+    public static <E> Node<E> mergeLists(LinkedList<E> list1, LinkedList<E> list2) {
+
+        // head nodes of input lists
+        Node<E> current1 = list1.head;
+        Node<E> current2 = list2.head;
+
+        // All nodes are assigned to the first list's head node
+        Node<E> resultNode = current1;
+
+        // temp holders for next values
+        Node<E> listTemp1;
+        Node<E> listTemp2;
+
+        while (current1 != null && current2 != null) {
+
+            listTemp1 = current1.next;
+            listTemp2 = current2.next;
+
+            current2.next = listTemp1;
+            current1.next = current2;
+            
+            current1 = listTemp1;
+            current2 = listTemp2;
+        }
+
+        return list1.head;
+    }
+
     @Override
     public String toString() {
 
@@ -156,3 +184,4 @@ public class LinkedList<E> {
         }
     }
 }
+
