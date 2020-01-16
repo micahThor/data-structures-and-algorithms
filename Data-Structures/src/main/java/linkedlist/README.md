@@ -129,3 +129,25 @@ During out whiteboarding session (Sergey and Josh) we decided to share the prope
 ---
 ---
 ---
+
+# Challenge Summary- Code Challenge 8 on Jan 15. 
+
+Create a function capable of merging two linked list with space complexity of O(1).
+
+
+## Challenge Description
+
+Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+
+## Approach & Efficiency
+
+I decided to tackle the iterative approach to this solution.  First I get the head of each list and set to a Node object.  I then traverse while neither Node equals null.  Inside the loop I keep track of next node values with temp Node holders to ensure I don't loose a link to the rest of either list.  I then set my list1 node to the list2 next and the list2 next to the list1 next. 
+
+In the end I return list1's head.
+
+
+## Solution
+[Visit My Solution By Clicking Here](https://github.com/micahThor/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedlist/LinkedList.java)
+
+![]()
