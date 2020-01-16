@@ -219,4 +219,106 @@ public class LinkedListTest {
 
         int actual = integerList.kthFromEnd(12);
     }
+
+    @Test public void linkedList_testZipper_HappyPath() {
+
+        LinkedList<Integer> list1= new LinkedList<>();
+
+        list1.insert(9);
+        list1.insert(7);
+        list1.insert(5);
+        list1.insert(3);
+        list1.insert(1);
+
+        LinkedList<Integer> list2= new LinkedList<>();
+
+        list2.insert(10);
+        list2.insert(8);
+        list2.insert(6);
+        list2.insert(4);
+        list2.insert(2);
+
+        LinkedList.Node<Integer> actualNode = LinkedList.mergeLists(list1, list2);
+
+        int expected = 1;
+        while (actualNode != null) {
+            assertEquals(expected, (int)actualNode.value);
+            actualNode = actualNode.next;
+            expected++;
+        }
+    }
+
+    @Test public void linkedList_testZipper_FirstArrayEmpty() {
+
+        LinkedList<Integer> list1= new LinkedList<>();
+
+        LinkedList<Integer> list2= new LinkedList<>();
+
+        list2.insert(10);
+        list2.insert(8);
+        list2.insert(6);
+        list2.insert(4);
+        list2.insert(2);
+
+        LinkedList.Node<Integer> actualNode = LinkedList.mergeLists(list1, list2);
+
+        int expected = 2;
+        while (actualNode != null) {
+            assertEquals(expected, (int)actualNode.value);
+            actualNode = actualNode.next;
+            expected += 2;
+        }
+    }
+
+    @Test public void linkedList_testZipper_SecondArrayEmpty() {
+
+        LinkedList<Integer> list1= new LinkedList<>();
+
+        LinkedList<Integer> list2= new LinkedList<>();
+
+        list2.insert(10);
+        list2.insert(8);
+        list2.insert(6);
+        list2.insert(4);
+        list2.insert(2);
+
+        LinkedList.Node<Integer> actualNode = LinkedList.mergeLists(list1, list2);
+
+        int expected = 2;
+        while (actualNode != null) {
+            assertEquals(expected, (int)actualNode.value);
+            actualNode = actualNode.next;
+            expected += 2;
+        }
+    }
+
+    @Test public void linkedList_testZipper_HappyPath2() {
+
+        LinkedList<Integer> list1= new LinkedList<>();
+
+        list1.insert(9);
+        list1.insert(7);
+        list1.insert(5);
+        list1.insert(3);
+
+        LinkedList<Integer> list2= new LinkedList<>();
+
+        list2.insert(10);
+        list2.insert(8);
+        list2.insert(6);
+        list2.insert(4);
+        list2.insert(2);
+
+        LinkedList.Node<Integer> actualNode = LinkedList.mergeLists(list1, list2);
+
+
+        assertEquals(3, (int)actualNode.value);
+        assertEquals(2, (int)actualNode.next.value);
+        assertEquals(5, (int)actualNode.next.next.value);
+        assertEquals(4, (int)actualNode.next.next.next.value);
+        assertEquals(7, (int)actualNode.next.next.next.next.value);
+        assertEquals(6, (int)actualNode.next.next.next.next.next.value);
+        assertEquals(9, (int)actualNode.next.next.next.next.next.next.value);
+        assertEquals(8, (int)actualNode.next.next.next.next.next.next.next.value);
+    }
 }
