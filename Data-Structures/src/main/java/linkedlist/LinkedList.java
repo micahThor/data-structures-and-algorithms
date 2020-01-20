@@ -143,7 +143,7 @@ public class LinkedList<E> {
 
             current2.next = listTemp1;
             current1.next = current2;
-            
+
             current1 = listTemp1;
             current2 = listTemp2;
         }
