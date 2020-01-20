@@ -1,6 +1,8 @@
 # Stacks and Queues
 <!-- Short summary or background information -->
-Create a Stack class that utilizes Nodes
+Create a Stack and Queue class that utilizes Nodes to achieve:  
+**STACK:**  Last in First Out data structure  
+**QUEUE:**  First in First Out data structure
 
 ## Challenge
 <!-- Description of the challenge -->
