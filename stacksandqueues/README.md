@@ -16,3 +16,12 @@ Create a Stack class that utilizes Nodes
 -- *peek()* : Returns current Node's value from the top of the Stack  
 -- *isEmpty()* : Returns boolean value for if the Stack has Nodes  
 -- *toString()* : Returns a String representing the Stack's Node values  
+
+---
+
+**Queue:**  
+-- *enqueue(E val)* : Creates a new Node with val and adds to back of Queue  
+-- *dequeue()* : Removes current Node from front of Queue and returns that node's value  
+-- *peek()* : Returns current Node's value from the front of the Queue  
+-- *isEmpty()* : Returns boolean value for if the Queue has Nodes  
+-- *toString()* : Returns a String representing the Queue's Node values 
