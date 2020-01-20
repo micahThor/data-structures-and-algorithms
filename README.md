@@ -7,4 +7,4 @@ This repo contains projects from Code Fellows 301 Javascript and Code Fellows 40
 
 [Click here to see my code challenge implementations](https://github.com/micahThor/data-structures-and-algorithms/tree/master/code401challenges/src/main/java/code401challenges)  
 
-[Click here to see my data structure - STACK & QUEUEU - implementations](https://github.com/micahThor/data-structures-and-algorithms/tree/master/stacksandqueues)
+[Click here to see my data structure - STACK & QUEUE - implementations](https://github.com/micahThor/data-structures-and-algorithms/tree/master/stacksandqueues)
