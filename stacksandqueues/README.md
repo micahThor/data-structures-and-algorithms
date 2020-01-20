@@ -46,8 +46,8 @@ Create a Stack and Queue class that utilizes Nodes to achieve:
  ---
 
  **Queue:**  
- -- *enqueue(E val)* : Creates a new Node with val and adds to back of Queue  
- -- *dequeue()* : Removes current Node from front of Queue and returns that node's value  
- -- *peek()* : Returns current Node's value from the front of the Queue  
- -- *isEmpty()* : Returns boolean value for if the Queue has Nodes  
- -- *toString()* : Returns a String representing the Queue's Node values 
+ - *enqueue(E val)* : Creates a new Node with val and adds to back of Queue  
+ - *dequeue()* : Removes current Node from front of Queue and returns that node's value  
+ - *peek()* : Returns current Node's value from the front of the Queue  
+ - *isEmpty()* : Returns boolean value for if the Queue has Nodes  
+ - *toString()* : Returns a String representing the Queue's Node values 
