@@ -28,20 +28,20 @@ Create a Stack and Queue class that utilizes Nodes to achieve:
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
  **Stack:**  
- -- All Stack operations (push, pop, peek, isEmpty) are Big O(1) because all values can be accessed directly and do not require iteration.  To achieve this I created a *top* node which has access to the first manipulatable value.  
+ - All Stack operations (push, pop, peek, isEmpty) are Big O(1) because all values can be accessed directly and do not require iteration.  To achieve this I created a *top* node which has access to the first manipulatable value.  
  
  **Queue:**  
- -- All Queue operations (enqueu, dequeue, peek, isEmpty) are Big O(1) because all values can be accessed directly and do not require iteration.  To achieve this I created a *front* and *back* nodes which has access to the applicable manipulatable value.
+ - All Queue operations (enqueu, dequeue, peek, isEmpty) are Big O(1) because all values can be accessed directly and do not require iteration.  To achieve this I created a *front* and *back* nodes which has access to the applicable manipulatable value.
  
  
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
  **Stack:**  
- -- *push(E val)* : Creates a new Node with val and adds to stop of Stack  
- -- *pop()* : Removes current Node from top of Stack and returns that node's value  
- -- *peek()* : Returns current Node's value from the top of the Stack  
- -- *isEmpty()* : Returns boolean value for if the Stack has Nodes  
- -- *toString()* : Returns a String representing the Stack's Node values  
+ - *push(E val)* : Creates a new Node with val and adds to stop of Stack  
+ - *pop()* : Removes current Node from top of Stack and returns that node's value  
+ - *peek()* : Returns current Node's value from the top of the Stack  
+ - *isEmpty()* : Returns boolean value for if the Stack has Nodes  
+ - *toString()* : Returns a String representing the Stack's Node values  
 
  ---
 
