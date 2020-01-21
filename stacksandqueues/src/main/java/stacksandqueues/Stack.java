@@ -9,13 +9,10 @@ public class Stack<E> {
     }
 
     public void push(E value) {
-        if (this.top == null) {
-            this.top = new Node<>(value);
-        } else {
-            Node<E> newNode = new Node<>(value);
-            newNode.next = this.top;
-            this.top = newNode;
-        }
+        Node<E> newNode = new Node<>(value);
+        newNode.next = this.top;
+        this.top = newNode;
+
     }
 
     public E pop() {
@@ -31,6 +28,9 @@ public class Stack<E> {
     }
 
     public E peek() {
+        if (this.top.value == null) {
+            return null;
+        }
         E topOfStackValue = this.top.value;
 
         return topOfStackValue;
