@@ -34,6 +34,9 @@ public class Queue<E> {
     }
 
     public E peek() {
+        if (this.front.value == null) {
+            return null;
+        }
         return this.front.value;
     }
 
