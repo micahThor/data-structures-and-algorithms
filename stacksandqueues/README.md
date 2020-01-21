@@ -77,4 +77,5 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 
 ## Solution
 <!-- Embedded whiteboard image -->
+[CLICK HERE TO SEE MY IMPLEMENTATION](https://github.com/micahThor/data-structures-and-algorithms/blob/master/stacksandqueues/src/main/java/stacksandqueues/PseudoQueue.java)
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Code%20challenge%2011.jpg)
