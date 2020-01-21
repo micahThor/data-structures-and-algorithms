@@ -51,3 +51,30 @@ Create a Stack and Queue class that utilizes Nodes to achieve:
  - *peek()* : Returns current Node's value from the front of the Queue  
  - *isEmpty()* : Returns boolean value for if the Queue has Nodes  
  - *toString()* : Returns a String representing the Queue's Node values 
+ 
+ ---
+ ---
+ 
+ # Code Challenge 11 - 20 JAN 2020
+ ## Challenge Summary
+<!-- Short summary or background information -->
+Write a class that utilizes two stack data structures to imitate a queue data structure.
+
+## Challenge Description
+<!-- Description of the challenge -->
+1. Create a brand new **PseudoQueue class**. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:  
+
+- **enqueue(value)** which inserts value into the PseudoQueue, using a first-in, first-out approach.  
+
+- **dequeue()** which extracts a value from the PseudoQueue, using a first-in, first-out approach.
+The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.  
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- **enqueue(value)** : Time and Space are Big O(1).  Adding to my new class includes pushing the new element to the main stack.
+
+- **dequeue()** : Time is Big O(1) and Space is Big O(n * n).  The time complexity is such that I have to make a pass thru main stack, popping values into the auxiliary stack.  Then I pop off the return value.  To return the main stack to its state, I have to make a pass thru auxiliary stack, popping values back into the main stack.  I then return the return value.  
+
+## Solution
+<!-- Embedded whiteboard image -->
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Code%20challenge%2011.jpg)
