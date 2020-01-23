@@ -79,3 +79,32 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 <!-- Embedded whiteboard image -->
 [CLICK HERE TO SEE MY IMPLEMENTATION](https://github.com/micahThor/data-structures-and-algorithms/blob/master/stacksandqueues/src/main/java/stacksandqueues/PseudoQueue.java)
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Code%20challenge%2011.jpg)
+
+---
+---
+ 
+ # Code Challenge 11 - 20 JAN 2020
+ ## Challenge Summary
+<!-- Short summary or background information -->
+Write a class MultiBracketValidation that is capable of returning true or false if an input string has correct brackets.    Correct bracket orientation includes:  
+        1. For every bracket type ('()', '[]', '{}') there must be a corresponding opening and closing bracket.
+        2. Order matters.  For every opening bracket, there must be an applicable closing bracket before encountering a differen type of closing bracket.
+
+## Challenge Description
+<!-- Description of the challenge -->
+1.  Write a method *public static boolean multiBracketValidation(String input)*  
+        Your function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+        Round Brackets : ()
+        Square Brackets : []
+        Curly Brackets : {}
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- My approach involved tracking two different queues.  One queue contained all opening brackets, and the other contained all closing brackets.  While iterating over the opening bracket queue, I attempt to find a closing bracket for every opening bracket.  If the queue's are empty at the end of the iteration, that means that every bracket found their match. Otherwise the input String does not contain valid brackets.
+
+
+## Solution
+<!-- Embedded whiteboard image -->
+[CLICK HERE TO SEE MY IMPLEMENTATION](https://github.com/micahThor/data-structures-and-algorithms/blob/master/stacksandqueues/src/main/java/stacksandqueues/MultiBracketValidation.java)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/lab%2013%20brackets.jpg)
