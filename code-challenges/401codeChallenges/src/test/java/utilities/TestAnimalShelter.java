@@ -102,10 +102,35 @@ public class TestAnimalShelter {
 
         // REMOVE ALL DOGGOS
         shelter.dequeue("dog");
+        // check string after
+        actual = shelter.toString();
+        expected = "FRONT -> (dog) -> (cat) -> (dog) -> (cat) -> (cat) -> (dog) -> (cat) -> (dog) -> (cat) -> BACK";
+        assertEquals(expected, actual);
+
         shelter.dequeue("dog");
+        // check string after
+        actual = shelter.toString();
+        expected = "FRONT -> (cat) -> (dog) -> (cat) -> (cat) -> (dog) -> (cat) -> (dog) -> (cat) -> BACK";
+        assertEquals(expected, actual);
+
         shelter.dequeue("dog");
+        // check string after
+        actual = shelter.toString();
+        expected = "FRONT -> (cat) -> (cat) -> (cat) -> (dog) -> (cat) -> (dog) -> (cat) -> BACK";
+        assertEquals(expected, actual);
+
         shelter.dequeue("dog");
+        // check string after
+        actual = shelter.toString();
+        expected = "FRONT -> (cat) -> (cat) -> (cat) -> (cat) -> (dog) -> (cat) -> BACK";
+        assertEquals(expected, actual);
+
         shelter.dequeue("dog");
+        // check string after
+        actual = shelter.toString();
+        expected = "FRONT -> (cat) -> (cat) -> (cat) -> (cat) -> (cat) -> BACK";
+        assertEquals(expected, actual);
+
         // REMOVE ALL CATS
         shelter.dequeue("cat");
         shelter.dequeue("cat");
