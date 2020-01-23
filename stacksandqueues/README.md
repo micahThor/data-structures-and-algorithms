@@ -83,7 +83,7 @@ The Stack instances have only push, pop, and peek methods. You should use your o
 ---
 ---
  
- # Code Challenge 11 - 20 JAN 2020
+ # Code Challenge 13 - 20 JAN 2020
  ## Challenge Summary
 <!-- Short summary or background information -->
 Write a class MultiBracketValidation that is capable of returning true or false if an input string has correct brackets.    Correct bracket orientation includes:  
