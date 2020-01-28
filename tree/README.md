@@ -47,12 +47,12 @@ My BinarySearchTree has a reference to a root node and the ability to verify if 
 <!-- Short summary or background information -->
 Create a class FizzBuzzTree that is a binary tree of String nodes.  FizzBuzzTree contains a method capable of accepting an integer tree, copying the values into a string, and changing those values to typical FizzBuzz requirements.  Requirements are stated as:
 
-              ```
+              
               if current node's inter value equivalent is evenly divisible by 5 or 3 : change to FIZZBUZZ
               if current node's inter value equivalent is evenly divisible by 5      : change to FIZZ
               if current node's inter value equivalent is evenly divisible by 3      : change to BUZZ
               else retain that value
-              ```
+              
 
 ## Challenge Description
 <!-- Description of the challenge -->
