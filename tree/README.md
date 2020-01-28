@@ -36,3 +36,42 @@ My BinarySearchTree has a reference to a root node and the ability to verify if 
 #### BinarySearchTree API
     add(int value)          : Adds an integer to the tree in the appropriate node location.  Node location is determined by the input value verses the current node value.  Natural ordering.
     contains(int value)     : Returns true if integer is within the tree
+    
+    
+---
+---
+
+# CODE CHALLENGE 16: 27 JAN 2020
+
+## Challenge Summary
+<!-- Short summary or background information -->
+Create a class FizzBuzzTree that is a binary tree of String nodes.  FizzBuzzTree contains a method capable of accepting an integer tree, copying the values into a string, and changing those values to typical FizzBuzz requirements.  Requirements are stated as:
+
+              ```
+              if current node's inter value equivalent is evenly divisible by 5 or 3 : change to FIZZBUZZ
+              if current node's inter value equivalent is evenly divisible by 5      : change to FIZZ
+              if current node's inter value equivalent is evenly divisible by 3      : change to BUZZ
+              else retain that value
+              ```
+
+## Challenge Description
+<!-- Description of the challenge -->
+1. Write a function called FizzBuzzTree which takes a tree as an argument.
+2. Without utilizing any of the built-in methods available to your language, determine whether or not the value of each node is divisible by 3, 5 or both. Create a new tree with the same structure as the original, but the values modified as follows:
+       - If the value is divisible by 3, replace the value with “Fizz”
+       - If the value is divisible by 5, replace the value with “Buzz”
+       - If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
+       - If the value is not divisible by 3 or 5, simply turn the number into a String.
+3. Return the new tree.
+
+## Approach & Efficiency
+My approach was to use adapt methods I wrote in code challenge 15.  To start this lab I had a way of adding values to a tree and traversing that tree in order.  Combining those two mutators, I had a way of first turning an integer tree into a string tree.  Then I had a way of checking all values in my string tree to see if they were divisible by fizz buzz rules.
+
+Overall my time complexity is reduced to O(n).  I know that I must visit every node in my integer tree.  I also make a second pass through my newly created string tree, costing another O(n) operation.
+
+My space complexity is O(n) because for every node in the input integer tree, I must create a corresponding String node.
+
+## Solution
+<!-- Embedded whiteboard image -->
+[Click here to see my FizzBuzzTree](https://github.com/micahThor/data-structures-and-algorithms/blob/master/tree/src/main/java/fizzbuzz/FizzBuzzTree.java)
+![]()
