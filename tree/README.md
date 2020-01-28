@@ -1,4 +1,6 @@
-# Trees
+# CODE CHALLENGE 15: 27 JAN 2020
+
+## Trees
 <!-- Short summary or background information -->
 Create a Tree and BinarySearchTree class.  Both tree's are binary in the sense that they contain references to two nodes.
 
