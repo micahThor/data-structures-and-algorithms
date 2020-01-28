@@ -74,4 +74,4 @@ My space complexity is O(n) because for every node in the input integer tree, I 
 ## Solution
 <!-- Embedded whiteboard image -->
 [Click here to see my FizzBuzzTree](https://github.com/micahThor/data-structures-and-algorithms/blob/master/tree/src/main/java/fizzbuzz/FizzBuzzTree.java)
-![]()
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/fizzbuzz%20tree.jpg)
