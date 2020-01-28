@@ -79,7 +79,6 @@ public class FizzBuzzTree {
             list.add(node.value);
             inOrder(node.right, list);
         }
-        System.out.println(list);
         return list;
     }
 }
