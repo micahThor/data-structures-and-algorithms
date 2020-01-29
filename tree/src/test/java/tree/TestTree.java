@@ -39,16 +39,15 @@ public class TestTree {
 
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(40);
-        expected.add(5);
-        expected.add(10);
         expected.add(20);
+        expected.add(10);
+        expected.add(5);
         expected.add(30);
-        expected.add(43);
         expected.add(50);
+        expected.add(43);
         expected.add(67);
 
         ArrayList<Integer> actual = myTestTree.preOrder();
-        System.out.println(actual);
 
         for (int i = 0; i < actual.size(); i++) {
             assertEquals(expected.get(i), actual.get(i));
@@ -81,11 +80,11 @@ public class TestTree {
         ArrayList<Integer> expected = new ArrayList<>();
         expected.add(5);
         expected.add(10);
-        expected.add(20);
         expected.add(30);
+        expected.add(20);
         expected.add(43);
-        expected.add(50);
         expected.add(67);
+        expected.add(50);
         expected.add(40);
 
         ArrayList<Integer> actual = myTestTree.postOrder();
