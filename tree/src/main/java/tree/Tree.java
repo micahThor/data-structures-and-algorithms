@@ -20,8 +20,8 @@ public class Tree {
 
         if (node != null) {
             list.add(node.value);
-            inOrder(node.left, list);
-            inOrder(node.right, list);
+            preOrder(node.left, list);
+            preOrder(node.right, list);
         }
         return list;
     }
@@ -50,8 +50,8 @@ public class Tree {
     private ArrayList<Integer> postOrder(Node node, ArrayList<Integer> list) {
 
         if (node != null) {
-            inOrder(node.left, list);
-            inOrder(node.right, list);
+            postOrder(node.left, list);
+            postOrder(node.right, list);
             list.add(node.value);
         }
         return list;
