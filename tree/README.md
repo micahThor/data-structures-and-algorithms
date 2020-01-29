@@ -75,3 +75,25 @@ My space complexity is O(n) because for every node in the input integer tree, I 
 <!-- Embedded whiteboard image -->
 [Click here to see my FizzBuzzTree](https://github.com/micahThor/data-structures-and-algorithms/blob/master/tree/src/main/java/fizzbuzz/FizzBuzzTree.java)
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/fizzbuzz%20tree.jpg)
+
+---
+---
+
+# CODE CHALLENGE 17: 28 JAN 2020
+
+## Challenge Summary
+<!-- Short summary or background information -->
+Create a breadthFirstSearch method capable of returning an array of tree node values.  Array will be ordered by the breadth-first traversal of a tree.
+              
+
+## Challenge Description
+<!-- Description of the challenge -->
+1. Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+## Approach & Efficiency
+My implementation uses an iterative approach to visit each node in the Binary Search Tree.  I used a Queue class to ensure the ArrayList that I am returning will be ordered in a breadth-first traversal of the tree.  The nodes are passed into the Queue one at a time until the tree is exhausted.  With each iteration, the current node's value is added to the ArrayList and removed from the front of the Queue.
+
+## Solution
+<!-- Embedded whiteboard image -->
+[Click here to see my Breadth First method](https://github.com/micahThor/data-structures-and-algorithms/blob/master/tree/src/main/java/tree/BinarySearchTree.java)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/breadthfirst%20tree%20traversal.jpg)
