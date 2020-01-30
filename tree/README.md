@@ -101,7 +101,7 @@ My implementation uses an iterative approach to visit each node in the Binary Se
 ---
 ---
 
-# CODE CHALLENGE 17: 28 JAN 2020
+# CODE CHALLENGE 18: 29 JAN 2020
 
 ## Challenge Summary
 <!-- Short summary or background information -->
