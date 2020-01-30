@@ -97,3 +97,24 @@ My implementation uses an iterative approach to visit each node in the Binary Se
 <!-- Embedded whiteboard image -->
 [Click here to see my Breadth First method](https://github.com/micahThor/data-structures-and-algorithms/blob/master/tree/src/main/java/tree/BinarySearchTree.java)
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/breadthfirst%20tree%20traversal.jpg)
+
+---
+---
+
+# CODE CHALLENGE 17: 28 JAN 2020
+
+## Challenge Summary
+<!-- Short summary or background information -->
+Create a breadthFirstSearch method capable of returning the maximum integer value in that tree. 
+              
+## Challenge Description
+<!-- Description of the challenge -->
+1. Write an instance method called find-maximum-value. Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric.
+
+## Approach & Efficiency
+My implementation uses an iterative approach to visit each node in the Binary Search Tree.  With each iteration, the current node's value is checked against the current max integer value.  If current is greater, set the max integer variable to current value.  Then dequeue that node, and keep going until you have visited each node.  Then return the max integer varible.
+
+## Solution
+<!-- Embedded whiteboard image -->
+[Click here to see my get max value method](https://github.com/micahThor/data-structures-and-algorithms/blob/master/tree/src/main/java/tree/Tree.java)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/max%20value%20in%20tree.jpg)
