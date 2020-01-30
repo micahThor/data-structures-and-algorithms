@@ -93,4 +93,13 @@ public class TestTree {
             assertEquals(expected.get(i), actual.get(i));
         }
     }
+
+    @Test
+    public void tree_GetMaxValue() {
+
+        int expected = 67;
+        int actual = myTestTree.getMaxValue_breadthFirstTraversal();
+
+        assertEquals(expected, actual);
+    }
 }

@@ -1,6 +1,5 @@
 package tree;
-
-
+import utility.Queue;
 import java.util.ArrayList;
 
 public class Tree {
@@ -55,5 +54,35 @@ public class Tree {
             list.add(node.value);
         }
         return list;
+    }
+
+    public int getMaxValue_breadthFirstTraversal() {
+
+        Queue<Node> auxiliaryQueue = new Queue<>();
+
+        if (this.root == null) {
+            throw new NullPointerException();
+        }
+
+        auxiliaryQueue.enqueue(this.root);
+        int maxValue = this.root.value;
+
+        Node tempNode;
+        while (!auxiliaryQueue.isEmpty()) {
+            tempNode = auxiliaryQueue.dequeue();
+
+            if (maxValue < tempNode.value) {
+                maxValue = tempNode.value;
+            }
+
+            if (tempNode.left != null) {
+                auxiliaryQueue.enqueue(tempNode.left);
+            }
+
+            if (tempNode.right != null) {
+                auxiliaryQueue.enqueue(tempNode.right);
+            }
+        }
+        return maxValue;
     }
 }
