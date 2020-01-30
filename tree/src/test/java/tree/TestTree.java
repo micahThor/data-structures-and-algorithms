@@ -102,4 +102,16 @@ public class TestTree {
 
         assertEquals(expected, actual);
     }
+
+    @Test(expected = NullPointerException.class)
+    public void tree_GetMaxValue_ThrowsNullPointerException() {
+
+        int expected = 67;
+
+        Tree emptyTree = new Tree();
+
+        int actual = emptyTree.getMaxValue_breadthFirstTraversal();
+
+        assertEquals(expected, actual);
+    }
 }
