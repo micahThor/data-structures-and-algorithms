@@ -9,6 +9,10 @@ public class HashTableTest {
 
     HashTable<String, Integer> hTable;
 
+
+    /*
+            Code Challenge 30 tests
+     */
     @Before
     public void init() {
         hTable = new HashTable<String, Integer>();
@@ -20,7 +24,7 @@ public class HashTableTest {
 
         int index = hTable.hash("hours");
         HashNode<String, Integer> head = hTable.bucketArray.get(index);
-        assertEquals(40, (Object)head.value);
+        assertEquals(40, (Object) head.value);
     }
 
     @Test
@@ -31,13 +35,42 @@ public class HashTableTest {
 
         int index = hTable.hash("hours");
         HashNode<String, Integer> head = hTable.bucketArray.get(index);
-        assertEquals(25, (Object)head.value);
+        assertEquals(25, (Object) head.value);
 
         head = head.next;
-        assertEquals(35, (Object)head.value);
+        assertEquals(35, (Object) head.value);
 
         head = head.next;
-        assertEquals(40, (Object)head.value);
+        assertEquals(40, (Object) head.value);
+    }
+
+    @Test
+    public void hashTable_testAdd_IncreaseTableSize() {
+
+        assertEquals(10, hTable.getNumOfBuckets());
+
+        hTable.add("hours", 40);
+        hTable.add("shour", 35);
+        hTable.add("shroddsdfsdfsdfsfu", 25);
+        hTable.add("d", 40);
+        hTable.add("dd", 40);
+
+        assertEquals(20, hTable.getNumOfBuckets());
+
+        hTable.add("dwer", 40);
+        hTable.add("dddsdfsdfsdfsdfsd", 40);
+        hTable.add("dwer", 40);
+        hTable.add("dwdsder", 40);
+        hTable.add("asfasfasfasdfasf", 40);
+        hTable.add("dddsdfsdf", 40);
+        hTable.add("derwerwer", 40);
+        hTable.add("tttggfgfgfgfgfgfgfgrt", 40);
+        hTable.add("rer", 40);
+        hTable.add("ioio", 40);
+        hTable.add("ioiasdfasdfasdfasdfsadfddso", 40);
+        hTable.add("erwe", 40);
+
+        assertEquals(40, hTable.getNumOfBuckets());
     }
 
     @Test
@@ -75,10 +108,10 @@ public class HashTableTest {
 
         int index = hTable.hash("hours");
         HashNode<String, Integer> head = hTable.bucketArray.get(index);
-        assertEquals(25, (Object)head.value);
+        assertEquals(25, (Object) head.value);
 
         head = head.next;
-        assertEquals(35, (Object)head.value);
+        assertEquals(35, (Object) head.value);
 
     }
 
@@ -96,4 +129,5 @@ public class HashTableTest {
 
         assertEquals(actual, actual2);
     }
+
 }
