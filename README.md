@@ -10,3 +10,5 @@ This repo contains projects from Code Fellows 301 Javascript and Code Fellows 40
 [Click here to see my data structure - STACK & QUEUE - implementations](https://github.com/micahThor/data-structures-and-algorithms/tree/master/stacksandqueues)
 
 [Click here to see my data structure - TREE & BST - implementations](https://github.com/micahThor/data-structures-and-algorithms/tree/master/tree)
+
+[Click here to see my data structure - HASHTABLE - implementations](https://github.com/micahThor/data-structures-and-algorithms/tree/master/hashtable/src/main/java/hashtable)
