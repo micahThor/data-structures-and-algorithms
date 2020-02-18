@@ -11,7 +11,7 @@ public class HashTable<K, V> {
     private int size;
 
     public HashTable() {
-        this.size = 0;
+        this.size = 10;
         this.numOfBuckets = 10;
         this.bucketArray = new ArrayList<>(numOfBuckets);
 
@@ -20,7 +20,7 @@ public class HashTable<K, V> {
     }
 
     public HashTable(int initialCapacity) {
-        this.size = 0;
+        this.size = initialCapacity;
         this.numOfBuckets = initialCapacity;
         this.bucketArray = new ArrayList<>(numOfBuckets);
 
@@ -36,17 +36,17 @@ public class HashTable<K, V> {
         // construct new node and set new node next to front of pseudo linked list
         HashNode<K, V> newNode = new HashNode<>(key, value);
         HashNode<K, V> head = this.bucketArray.get(indexToInsertNode);
-        newNode.next = head;
 
         // add to bucket and increase size
-        this.bucketArray.add(indexToInsertNode, newNode);
         this.size++;
+        newNode.next = head;
+        this.bucketArray.set(indexToInsertNode, newNode);
 
         // increase size if load factor meets or exceeds 70% capacity
-        if ((float)this.size / this.numOfBuckets >= 0.7) {
+        if ((1.0*size)/this.numOfBuckets >= 0.7)  {
             ArrayList<HashNode<K, V>> temp  = this.bucketArray;
-            this.bucketArray = new ArrayList<>();
             this.numOfBuckets *= 2;
+            this.bucketArray = new ArrayList<>(numOfBuckets);
             this.size = 0;
 
             for (int i = 0; i < this.numOfBuckets; i++)
@@ -85,6 +85,15 @@ public class HashTable<K, V> {
 
     public int hash(K key) {
         int hashCode = key.hashCode();
-        return hashCode % numOfBuckets;
+        int index = Math.abs(hashCode % this.numOfBuckets);
+        return index;
+    }
+
+    public int getSize() {
+        return this.size;
+    }
+
+    public int getNumOfBuckets() {
+        return this.numOfBuckets;
     }
 }
