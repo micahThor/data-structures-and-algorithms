@@ -25,4 +25,27 @@ My approach includes using an ArrayList as the underlying collection.  Within ea
 **add**:      takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.  
 **get**:      takes in the key and returns the value from the table.  
 **contains**: takes in the key and returns a boolean, indicating if the key exists in the table already.  
-**hash**:     takes in an arbitrary key and returns an index in the collection.  
+**hash**:     takes in an arbitrary key and returns an index in the collection.    
+
+----
+
+# Challenge Summary
+<!-- Short summary or background information -->
+Utilize my HashTable implementation, create a method that will return the first repeated word in a long paragraph of words.
+
+## Challenge Description
+<!-- Description of the challenge -->
+-Write a function that accepts a lengthy string parameter.  
+-Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+My approach involves creating an array of words from the input String.  Then I will iterate through the array, checking to see if that word is already in my hashtable.  If it is in my hashtable, I return that String.  Otherwise I add it to the hashtable and continue iterating.
+
+| Method | Big O time | Big O space
+| ----------- | ----------- | ----------- |
+| getRepeated | O(n) | O(n)
+
+## Solution
+<!-- Embedded whiteboard image -->
+![Whiteboard for code challenge 32]()https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/repeated%20word.jpg
