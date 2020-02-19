@@ -48,4 +48,4 @@ My approach involves creating an array of words from the input String.  Then I w
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![Whiteboard for code challenge 32]()https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/repeated%20word.jpg
+![Whiteboard for code challenge 32](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/repeated%20word.jpg)
