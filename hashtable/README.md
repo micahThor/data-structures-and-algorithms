@@ -29,7 +29,7 @@ My approach includes using an ArrayList as the underlying collection.  Within ea
 
 ----
 
-# Challenge Summary
+# Challenge Summary - Code Challenge 32 18 FEB 2020
 <!-- Short summary or background information -->
 Utilize my HashTable implementation, create a method that will return the first repeated word in a long paragraph of words.
 
