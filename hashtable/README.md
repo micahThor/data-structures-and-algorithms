@@ -49,3 +49,26 @@ My approach involves creating an array of words from the input String.  Then I w
 ## Solution
 <!-- Embedded whiteboard image -->
 ![Whiteboard for code challenge 32](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/repeated%20word.jpg)
+
+----
+
+# Challenge Summary - Code Challenge 33 19 FEB 2020
+<!-- Short summary or background information -->
+Utilize my HashTable implementation, create a method that will return the shared values between two binary search trees.
+
+## Challenge Description
+<!-- Description of the challenge -->
+-Write a function called tree_intersection that takes two binary tree parameters.
+-Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+My approach is to recurse over the first tree, adding all values to the hashtable.  Then I recurse over the second tree, checking if the value is contained within hashtable.  If in hashtable, add to result array.  Then return that array.
+
+| Method | Big O time | Big O space
+| ----------- | ----------- | ----------- |
+| getRepeated | O(n) | O(n)
+
+## Solution
+<!-- Embedded whiteboard image -->
+![Whiteboard for code challenge 33](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/tree%20Intersection.jpg)
