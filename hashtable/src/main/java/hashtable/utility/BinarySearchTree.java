@@ -1,6 +1,4 @@
-package tree;
-
-import utility.Queue;
+package hashtable.utility;
 
 import java.util.ArrayList;
 
