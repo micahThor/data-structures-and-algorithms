@@ -67,7 +67,7 @@ My approach is to recurse over the first tree, adding all values to the hashtabl
 
 | Method | Big O time | Big O space
 | ----------- | ----------- | ----------- |
-| getRepeated | O(n) | O(n)
+| treeIntersection | O(n) | O(n)
 
 ## Solution
 <!-- Embedded whiteboard image -->
