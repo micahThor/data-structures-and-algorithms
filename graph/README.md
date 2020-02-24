@@ -5,9 +5,11 @@ My graph is generic, capable of storing any valid Java type.  The graph declarat
 
 ## Challenge
 <!-- Description of the challenge -->
+Create a Graph class capable of storing Nodes.  Nodes contain a value and a list of Edges.  Edges contain a weight and a list of referenced Nodes.
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+My Graph class uses an HashMap to store Nodes.  Each Node is capable of being retrieved/added in Big O(1) time.  Each Node contains a list of Edges, which can be accessed in Big O(n) time at worst. 
 
 ## API
 <!-- Description of each method publicly available in your Graph -->
