@@ -11,20 +11,20 @@ My graph is generic, capable of storing any valid Java type.  The graph declarat
 
 ## API
 <!-- Description of each method publicly available in your Graph -->
--AddNode()   
+- AddNode()   
         Adds a new node to the graph. 
         Takes in the value of that node.  
         Returns the added node.  
--AddEdge()   
+- AddEdge()   
         Adds a new edge between two nodes in the graph. 
         Include the ability to have a “weight”  
         Takes in the two nodes to be connected by the edge. 
         Both nodes should already be in the Graph. 
--GetNodes()    
+- GetNodes()    
         Returns all of the nodes in the graph as a collection (set, list, or similar)
--GetNeighbors()    
+- GetNeighbors()    
         Returns a collection of nodes connected to the given node. 
         Takes in a given node. 
         Include the weight of the connection in the returned collection  
--Size()    
+- Size()    
         Returns the total number of nodes in the graph. 
