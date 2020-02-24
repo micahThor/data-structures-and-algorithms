@@ -58,7 +58,7 @@ public class GraphTest {
     public void graph_TestGetNeighbors() {
         GraphNode<Integer> newNode1 = testGraph.addNode(22);
         GraphNode<Integer> newNode2 = testGraph.addNode(90);
-        GraphNode<Integer> newNode3 = testGraph.addNode(90);
+        GraphNode<Integer> newNode3 = testGraph.addNode(60);
 
         // add edges to this node
         GraphNode<Integer> newNode4 = testGraph.addNode(33);
@@ -77,7 +77,7 @@ public class GraphTest {
     public void graph_TestGetNeighborsWeight() {
         GraphNode<Integer> newNode1 = testGraph.addNode(22);
         GraphNode<Integer> newNode2 = testGraph.addNode(90);
-        GraphNode<Integer> newNode3 = testGraph.addNode(90);
+        GraphNode<Integer> newNode3 = testGraph.addNode(60);
 
         // add edges to this node
         GraphNode<Integer> newNode4 = testGraph.addNode(33);

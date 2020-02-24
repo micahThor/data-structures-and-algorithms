@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Graph<E> {
 
-    private HashMap<GraphNode<E>, GraphNode<E>> nodeHashMap;
+    private HashMap<E, GraphNode<E>> nodeHashMap;
 
     public Graph() {
         this.nodeHashMap = new HashMap<>();
@@ -13,7 +13,7 @@ public class Graph<E> {
 
     public GraphNode<E> addNode(E value) {
         GraphNode<E> node = new GraphNode<>(value);
-        this.nodeHashMap.put(node, node);
+        this.nodeHashMap.put(value, node);
         return node;
     }
 
@@ -21,10 +21,10 @@ public class Graph<E> {
         if (nodeHashMap.containsValue(node1) && nodeHashMap.containsValue(node2)) {
             // self referencing edge
             if (node1 == node2) {
-                nodeHashMap.get(node1).addEdge(node1, weight);
+                nodeHashMap.get(node1.getValue()).addEdge(node1, weight);
             } else {
-                nodeHashMap.get(node1).addEdge(node2, weight);
-                nodeHashMap.get(node2).addEdge(node1, weight);
+                nodeHashMap.get(node1.getValue()).addEdge(node2, weight);
+                nodeHashMap.get(node2.getValue()).addEdge(node1, weight);
             }
             return true;
         }
@@ -32,7 +32,7 @@ public class Graph<E> {
     }
 
     public List<Edge> getNeighbors(GraphNode<E> node) {
-        if (this.nodeHashMap.containsKey(node)) {
+        if (this.nodeHashMap.containsKey(node.getValue())) {
             return node.getEdgesList();
         }
         return null;
