@@ -3,6 +3,7 @@ package graph;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -18,13 +19,6 @@ public class GraphTest {
         testGraph.addNode(17);
         testGraph.addNode(19);
         testGraph.addNode(11);
-    }
-
-    @Test
-    public void graph_TestAddNode() {
-        testGraph.containsValue(17);
-        testGraph.containsValue(19);
-        testGraph.containsValue(11);
     }
 
     @Test
@@ -113,5 +107,69 @@ public class GraphTest {
     public void graph_TestEmtpyGraphForNull() {
         Graph<Integer> emptyGraph = new Graph<>();
         assertNull(emptyGraph.getNodes());
+    }
+
+    @Test
+    public void graph_TestBreadthFirstTraverse() {
+        Graph<Integer> testGraph2 = new Graph<>();
+        testGraph2.addNode(22);
+        testGraph2.addNode(90);
+        testGraph2.addNode(60);
+
+        // add edges to this node
+        GraphNode<Integer> newNode4 = testGraph2.addNode(33);
+        testGraph2.addEdge(33, 22, 1.0);
+        testGraph2.addEdge(33, 90, 2.0);
+        testGraph2.addEdge(33, 60, 3.0);
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(33);
+        expected.add(22);
+        expected.add(90);
+        expected.add(60);
+
+        LinkedList<GraphNode> actualNodes = (LinkedList<GraphNode>)testGraph2.getNodes_BreadthFirstTraversal(33);
+        ArrayList<Integer> actualValues = new ArrayList<>();
+        for (GraphNode node : actualNodes) {
+            actualValues.add((Integer)node.getValue());
+        }
+
+        assertArrayEquals(expected.toArray(), actualValues.toArray());
+    }
+
+    @Test
+    public void graph_TestBreadthFirstTraverse2() {
+        Graph<Integer> testGraph2 = new Graph<>();
+        testGraph2.addNode(22);
+        testGraph2.addNode(90);
+        testGraph2.addNode(60);
+        testGraph2.addNode(45);
+        testGraph2.addNode(88);
+
+        // add edges to this node
+        testGraph2.addNode(33);
+        testGraph2.addEdge(33, 22, 1.0);
+        testGraph2.addEdge(33, 90, 2.0);
+        testGraph2.addEdge(33, 60, 3.0);
+
+        testGraph2.addNode(34);
+        testGraph2.addEdge(34, 22, 1.0);
+        testGraph2.addEdge(34, 90, 2.0);
+        testGraph2.addEdge(34, 60, 3.0);
+
+        ArrayList<Integer> expected = new ArrayList<>();
+        expected.add(33);
+        expected.add(22);
+        expected.add(90);
+        expected.add(60);
+        expected.add(34);
+
+        LinkedList<GraphNode> actualNodes = (LinkedList<GraphNode>)testGraph2.getNodes_BreadthFirstTraversal(33);
+        ArrayList<Integer> actualValues = new ArrayList<>();
+        for (GraphNode node : actualNodes) {
+            actualValues.add((Integer)node.getValue());
+        }
+
+        assertArrayEquals(expected.toArray(), actualValues.toArray());
     }
 }
