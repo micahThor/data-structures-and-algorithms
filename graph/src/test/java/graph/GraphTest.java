@@ -31,7 +31,7 @@ public class GraphTest {
     public void graph_TestAddEdge() {
         GraphNode<Integer> newNode1 = testGraph.addNode(33);
         GraphNode<Integer> newNode2 = testGraph.addNode(27);
-        boolean result = testGraph.addEdge(newNode1, newNode2, 17.5);
+        boolean result = testGraph.addEdge(33, 27, 17.5);
         // test for adding edges to each node
         assertTrue(result);
         // test that node2 was added to node1's edge list
@@ -62,9 +62,9 @@ public class GraphTest {
 
         // add edges to this node
         GraphNode<Integer> newNode4 = testGraph.addNode(33);
-        testGraph.addEdge(newNode4, newNode1, 1.0);
-        testGraph.addEdge(newNode4, newNode2, 2.0);
-        testGraph.addEdge(newNode4, newNode3, 3.0);
+        testGraph.addEdge(33, 22, 1.0);
+        testGraph.addEdge(33, 90, 2.0);
+        testGraph.addEdge(33, 60, 3.0);
         // create list of edges from newNode4
         List<Edge> list =  testGraph.getNeighbors(newNode4);
         // test that each node is referenced in edge list
@@ -81,9 +81,9 @@ public class GraphTest {
 
         // add edges to this node
         GraphNode<Integer> newNode4 = testGraph.addNode(33);
-        testGraph.addEdge(newNode4, newNode1, 1.0);
-        testGraph.addEdge(newNode4, newNode2, 2.0);
-        testGraph.addEdge(newNode4, newNode3, 3.0);
+        testGraph.addEdge(33, 22, 1.0);
+        testGraph.addEdge(33, 90, 2.0);
+        testGraph.addEdge(33, 60, 3.0);
         // create list of edges from newNode4
         List<Edge> list =  testGraph.getNeighbors(newNode4);
         // test that each node is referenced in edge list
@@ -102,7 +102,7 @@ public class GraphTest {
         // add node to this node
         GraphNode<Integer> newNode4 = testGraph.addNode(33);
         // make node self reference with edge
-        testGraph.addEdge(newNode4, newNode4, 1.0);
+        testGraph.addEdge(33, 33, 1.0);
         // create list of edges from newNode4
         List<Edge> list =  testGraph.getNeighbors(newNode4);
         // test that node is referenced to itself

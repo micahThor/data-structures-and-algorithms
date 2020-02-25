@@ -17,14 +17,16 @@ public class Graph<E> {
         return node;
     }
 
-    public boolean addEdge(GraphNode<E> node1, GraphNode<E> node2, double weight) {
-        if (nodeHashMap.containsValue(node1) && nodeHashMap.containsValue(node2)) {
+    public boolean addEdge(E nodeKey1, E nodeKey2, double weight) {
+        if (nodeHashMap.containsKey(nodeKey1) && nodeHashMap.containsKey(nodeKey2)) {
+            GraphNode<E> node1 = nodeHashMap.get(nodeKey1);
+            GraphNode<E> node2 = nodeHashMap.get(nodeKey2);
             // self referencing edge
-            if (node1 == node2) {
-                nodeHashMap.get(node1.getValue()).addEdge(node1, weight);
+            if (nodeKey1 == nodeKey2) {
+                node1.addEdge(node1, weight);
             } else {
-                nodeHashMap.get(node1.getValue()).addEdge(node2, weight);
-                nodeHashMap.get(node2.getValue()).addEdge(node1, weight);
+                node1.addEdge(node2, weight);
+                node2.addEdge(node1, weight);
             }
             return true;
         }
