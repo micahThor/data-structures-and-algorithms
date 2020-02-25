@@ -30,3 +30,27 @@ My Graph class uses an HashMap to store Nodes.  Each Node is capable of being re
         Include the weight of the connection in the returned collection  
 - Size()    
         Returns the total number of nodes in the graph. 
+
+---
+
+# Challenge Summary - Code Challenge 36 24 FEB 2020
+<!-- Short summary or background information -->
+Given a Graph, return a collection of the nodes that represent a **breadth-first traversal**
+
+## Challenge Description
+<!-- Description of the challenge -->
+- Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+My approach included modifying the GraphNode class to include the ability to return whether that node had been visited.  In this case, I wanted to keep track of which nodes had been visited in order to not duplicate values in my result array.  
+
+In my method I add each node to a Linked list that acts like a queueu.  Everytime I add to the queueu I check to see if that node has any edges that haven't been visited.  If they haven't been visited, I add them to the queueu.  Everytime I remove from the queueu, I add to the result list.
+
+| Method | Big O time | Big O space
+| ----------- | ----------- | ----------- |
+| breadthFirstTraversal | O(n) | O(n)
+
+## Solution
+<!-- Embedded whiteboard image -->
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Graph%20-%20BF.jpg)
