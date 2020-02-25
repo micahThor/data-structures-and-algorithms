@@ -7,6 +7,8 @@ public class GraphNode<E> {
     private E value;
     private List<Edge> edgesList;
 
+    private boolean visited;
+
     public GraphNode(E value) {
         this.value = value;
         this.edgesList = new LinkedList<Edge>();
@@ -22,5 +24,13 @@ public class GraphNode<E> {
 
     public List<Edge> getEdgesList() {
         return this.edgesList;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 }
