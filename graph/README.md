@@ -53,4 +53,29 @@ In my method I add each node to a Linked list that acts like a queueu.  Everytim
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Graph%20-%20BF.jpg)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/Graph%20-%20BF.jpg)]
+
+
+---
+
+# Challenge Summary - Code Challenge 37 25 FEB 2020
+<!-- Short summary or background information -->
+Utilize Graph implementation to determine if a direct route is possible given a list of graph key values.
+
+## Challenge Description
+<!-- Description of the challenge -->
+- Write a function based on the specifications above, which takes in a graph, and an array of city names. Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+In this challenge I created a helper class, DirectFlight.  DirectFlight has a boolean value representing if a shared edge(s) and a double value representing the cumulative value of the edge(s) weight.
+
+My approach includes iterating over key values to determine if they have edges that exist as other key values in the input array.  If there are shared edges, those key values are marked as seen.  Seen in this context means that a direct route is possible.  At the end of the iteration logic I iterate again over the keys to see if any key returns false for having been seen.  This would indicate that a direct route is not possible.  Otherwise, return the accumulative value of the shared edges weight and true.
+
+| Method | Big O time | Big O space
+| ----------- | ----------- | ----------- |
+| breadthFirstTraversal | O(n^2) | O(1)
+
+## Solution
+<!-- Embedded whiteboard image -->
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/graph%20isdirect.jpg)
