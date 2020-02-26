@@ -56,6 +56,14 @@ public class Graph<E> {
         return nodes;
     }
 
+    public boolean contains(E key) {
+        return this.nodeHashMap.containsKey(key);
+    }
+
+    public GraphNode<E> getNode(E key) {
+        return this.nodeHashMap.get(key);
+    }
+
     public int size() {
         return this.nodeHashMap.size();
     }
