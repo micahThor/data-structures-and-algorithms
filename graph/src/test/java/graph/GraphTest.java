@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 public class GraphTest {
 
     Graph<Integer> testGraph;
+    Graph<String> flightRoutes;
 
     @Before
     public void initGraph() {
@@ -19,6 +20,27 @@ public class GraphTest {
         testGraph.addNode(17);
         testGraph.addNode(19);
         testGraph.addNode(11);
+    }
+
+    @Before
+    public void initFlightMap() {
+        flightRoutes = new Graph<>();
+        flightRoutes.addNode("pandora");
+        flightRoutes.addNode("arendelle");
+        flightRoutes.addNode("metroville");
+        flightRoutes.addNode("monstropolis");
+        flightRoutes.addNode("naboo");
+        flightRoutes.addNode("narnia");
+
+        flightRoutes.addEdge("pandora", "arendelle", 150.0);
+        flightRoutes.addEdge("arendelle", "monstropolis", 42.0);
+        flightRoutes.addEdge("monstropolis", "naboo", 73.0);
+        flightRoutes.addEdge("naboo", "narnia", 250.0);
+        flightRoutes.addEdge("metroville", "pandora", 82.0);
+        flightRoutes.addEdge("metroville", "arendelle", 99.0);
+        flightRoutes.addEdge("metroville", "monstropolis", 105.0);
+        flightRoutes.addEdge("metroville", "naboo", 26.0);
+        flightRoutes.addEdge("metroville", "narnia", 37.0);
     }
 
     @Test
@@ -171,5 +193,48 @@ public class GraphTest {
         }
 
         assertArrayEquals(expected.toArray(), actualValues.toArray());
+    }
+
+    @Test
+    public void graph_TestIDirectFlight_HappyPath1() {
+        String[] cities = new String[]{"metroville", "pandora"};
+        DirectFlight actualDirect = DirectFlight.isDirect(flightRoutes, cities);
+
+        assertTrue(actualDirect.isDirect);
+        assertEquals(82.0, actualDirect.price, 0.001);
+    }
+
+    @Test
+    public void graph_TestIDirectFlight_HappyPath2() {
+        String[] cities = new String[]{"arendelle", "monstropolis", "naboo"};
+        DirectFlight actualDirect = DirectFlight.isDirect(flightRoutes, cities);
+
+        assertTrue(actualDirect.isDirect);
+        assertEquals(115.0, actualDirect.price, 0.001);
+    }
+
+    @Test
+    public void graph_TestIDirectFlight_HappyPath3() {
+        String[] cities = new String[]{"pandora", "arendelle", "monstropolis", "naboo", "narnia"};
+        DirectFlight actualDirect = DirectFlight.isDirect(flightRoutes, cities);
+
+        assertTrue(actualDirect.isDirect);
+        assertEquals(515.0, actualDirect.price, 0.001);
+    }
+
+    @Test
+    public void graph_TestIDirectFlight_False1() {
+        String[] cities = new String[]{"pandora", "nowhereville"};
+        DirectFlight actualDirect = DirectFlight.isDirect(flightRoutes, cities);
+
+        assertFalse(actualDirect.isDirect);
+    }
+
+    @Test
+    public void graph_TestIDirectFlight_False2() {
+        String[] cities = new String[]{"pandora", "monstropolis"};
+        DirectFlight actualDirect = DirectFlight.isDirect(flightRoutes, cities);
+
+        assertFalse(actualDirect.isDirect);
     }
 }
