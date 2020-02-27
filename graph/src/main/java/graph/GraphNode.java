@@ -33,4 +33,9 @@ public class GraphNode<E> {
     public void setVisited(boolean visited) {
         this.visited = visited;
     }
+
+    @Override
+    public String toString() {
+        return this.value.toString();
+    }
 }

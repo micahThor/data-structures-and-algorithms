@@ -237,4 +237,40 @@ public class GraphTest {
 
         assertFalse(actualDirect.isDirect);
     }
+
+    @Test
+    public void graph_TestDepthFirstTraversal() {
+        Graph<String> graph = new Graph<>();
+        GraphNode gn0 = graph.addNode("a");
+        GraphNode gn1 = graph.addNode("b");
+        GraphNode gn2 = graph.addNode("c");
+        GraphNode gn3 =  graph.addNode("g");
+        GraphNode gn4 = graph.addNode("d");
+        GraphNode gn5 = graph.addNode("e");
+        GraphNode gn6 = graph.addNode("h");
+        GraphNode gn7 = graph.addNode("f");
+
+        graph.addEdge("a", "b", 1.0);
+        graph.addEdge("b", "c", 1.0);
+        graph.addEdge("c", "g", 1.0);
+        graph.addEdge("b", "d", 1.0);
+        graph.addEdge("a", "d", 1.0);
+        graph.addEdge("d", "e", 1.0);
+        graph.addEdge("d", "h", 1.0);
+        graph.addEdge("d", "f", 1.0);
+        graph.addEdge("f", "h", 1.0);
+
+        List<GraphNode> actual = graph.getNodes_DepthFirstTraversal("a");
+        System.out.println(actual.toString());
+        assertEquals(gn0, actual.get(0));
+        assertEquals(gn4, actual.get(1));
+        assertEquals(gn7, actual.get(2));
+        assertEquals(gn6, actual.get(3));
+        assertEquals(gn5, actual.get(4));
+        assertEquals(gn1, actual.get(5));
+        assertEquals(gn2, actual.get(6));
+        assertEquals(gn3, actual.get(7));
+
+
+    }
 }
