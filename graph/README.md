@@ -74,8 +74,32 @@ My approach includes iterating over key values to determine if they have edges t
 
 | Method | Big O time | Big O space
 | ----------- | ----------- | ----------- |
-| breadthFirstTraversal | O(n^2) | O(1)
+| isDirect | O(n) | O(1)
 
 ## Solution
 <!-- Embedded whiteboard image -->
 ![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/graph%20isdirect.jpg)
+
+---
+
+# Challenge Summary - Code Challenge 38 26 FEB 2020
+<!-- Short summary or background information -->
+Given a Graph, return a collection of the nodes that represent a **depth-first traversal**
+
+## Challenge Description
+<!-- Description of the challenge -->
+- Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+My approach involves a traversal that adds unseen nodes to a stack.  Until that stack is empty, nodes will continue checking their edges for other unseen nodes.  If an shared edge node is unvisited, it is added to stack.
+
+| Method | Big O time | Big O space
+| ----------- | ----------- | ----------- |
+| depthFirstTraversal | O(n) | O(n)
+
+## Solution
+<!-- Embedded whiteboard image -->
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/graph%20DFS1.JPG)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/graph%20DFS2.JPG)
+![](https://github.com/micahThor/data-structures-and-algorithms/blob/master/assets/graph%20DFS3.JPG)
