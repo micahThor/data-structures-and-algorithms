@@ -1,8 +1,6 @@
 package graph;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Graph<E> {
 
@@ -93,6 +91,38 @@ public class Graph<E> {
                         graphNodes.add(edgeListNode);
                         queueOfNodes.add(edgeListNode);
                         edgeListNode.setVisited(true);
+                    }
+                }
+            }
+        }
+        return graphNodes;
+    }
+
+    public List<GraphNode> getNodes_DepthFirstTraversal(E nodeKey) {
+        ArrayList<GraphNode> graphNodes = new ArrayList<>();
+
+        if (!this.nodeHashMap.containsKey(nodeKey)) {
+            return graphNodes;
+        }
+
+        Stack<GraphNode> nodeStack = new Stack<>();
+
+        GraphNode<E> node = this.nodeHashMap.get(nodeKey);
+        nodeStack.add(node);
+
+        while (!nodeStack.isEmpty()) {
+
+            GraphNode<E> temp = nodeStack.pop();
+            if (temp.isVisited() == false) {
+                graphNodes.add(temp);
+                temp.setVisited(true);
+            }
+
+            if (temp.getEdgesList() != null) {
+                for (Edge edge : temp.getEdgesList()) {
+                    GraphNode<E> edgeListNode = edge.getDestination();
+                    if (edgeListNode.isVisited() == false) {
+                        nodeStack.add(edgeListNode);
                     }
                 }
             }
